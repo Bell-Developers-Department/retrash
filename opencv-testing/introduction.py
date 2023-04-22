@@ -34,17 +34,17 @@ def place_square_at_center(image, square_size):
         image, rectangle_from, rectangle_to, (0, 0, 255), 3)
 
 
-img = cv.imread('saul-goodman.jpg', cv.IMREAD_GRAYSCALE)
+img = cv.imread('bale.webp', cv.IMREAD_GRAYSCALE)
 
 if img is None:
     sys.exit("Could not read the image.")
 
 
-img = cv.resize(img, (400, 400))
+img = cv.resize(img, (400, 350))
 img = place_square_at_center(img, 200)
 
 cv.imshow("Display window", img)
 k = cv.waitKey(0)
 
 if k == ord("s"):
-    cv.imwrite("starry_night.png", img[100:300, 100:300])
+    cv.imwrite("starry_night.png", img[75:275, 100:300])
