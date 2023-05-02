@@ -2,6 +2,11 @@ import cv2 as cv
 import math
 
 
+def put_text(frame, text):
+    return cv.putText(
+        frame, text, (100, 100), cv.FONT_HERSHEY_PLAIN, 5, (0, 0, 255), 10, bottomLeftOrigin=False)
+
+
 def get_center_point(image_shape):
     return (math.ceil(float(image_shape[0] / 2)), math.ceil(float(image_shape[1] / 2)))
 
